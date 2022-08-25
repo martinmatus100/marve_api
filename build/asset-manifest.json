@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7a239647.css",
+    "main.js": "/static/js/main.4463065f.js",
+    "static/media/main-banner-marvel.jpg": "/static/media/main-banner-marvel.a8a29d84369f0d77b2a8.jpg",
+    "static/media/no-image-marvel.jpg": "/static/media/no-image-marvel.44665a2082472d0597ec.jpg",
+    "static/media/marvel-logo.png": "/static/media/marvel-logo.edab6b6b7d565c728ffb.png",
+    "index.html": "/index.html",
+    "main.7a239647.css.map": "/static/css/main.7a239647.css.map",
+    "main.4463065f.js.map": "/static/js/main.4463065f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a239647.css",
+    "static/js/main.4463065f.js"
+  ]
+}

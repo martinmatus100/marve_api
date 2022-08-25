@@ -1,0 +1,53 @@
+@use "../../scss/" as *;
+
+.logo {
+    font-size: 40px;
+    font-weight: 600;
+
+    @include flex(center, unset);
+
+    img {
+        margin-right: 10px;
+        width: 90px;
+    }
+
+    a {
+        @include flex(center, center);
+        color: $color-marvel-white;
+    }
+}
+
+.header {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    transition: height 0.3s ease, background-color 0.3s ease;
+
+    &.shrink {
+        height: 80px;
+        background-color: $color-marvel-black;
+    }
+
+    &__container {
+        @include flex(center, center);
+        height: 100%;
+        padding: 0 30px;
+
+        @include mobile {
+            justify-content: center;
+        }
+    }
+
+    &__btn {
+        background: transparent;
+        border: 2px white solid;
+    }
+
+    &__btn-back {
+        position: absolute;
+        left: 30px;
+    }
+}

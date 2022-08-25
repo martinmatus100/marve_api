@@ -1,0 +1,23 @@
+@use "../../scss/" as *;
+
+.comic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+    position: relative;
+
+    @include mobile {
+        margin-top: 50px;
+    }
+
+    &__loadmore {
+        text-align: center;
+    }
+
+    &__paginate {
+        width: 100%;
+        position: absolute;
+        bottom: -50px;
+    }
+}

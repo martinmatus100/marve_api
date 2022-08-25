@@ -1,0 +1,54 @@
+@use "../../scss/" as *;
+
+.comic-card {
+    position: relative;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 160%;
+    border-radius: 30px;
+    margin-bottom: 15px;
+    max-height: 412px;
+
+    &__name {
+        color: $color-marvel-white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        @include mobile {
+            transform: none;
+            transition: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: auto;
+            bottom: 0;
+            left: 5%;
+            padding: 10px;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $color-marvel-black-2;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 30px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        &:hover::before {
+            opacity: 0.8;
+        }
+
+        &:hover &__name {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

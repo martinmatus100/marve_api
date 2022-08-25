@@ -1,0 +1,9 @@
+@use "../../scss/" as *;
+
+.pagination {
+    @include flex(center, center);
+
+    &__page-item {
+        margin: 0 10px;
+    }
+}

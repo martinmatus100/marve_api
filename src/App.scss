@@ -1,0 +1,109 @@
+@use "./scss/" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+
+  @include mobile {
+    font-size: 60%;
+  }
+}
+
+body {
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: $color-marvel-black-2;
+  color: $color-marvel-white;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  outline: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.banner {
+  height: 50vh;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include overlay();
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-image: linear-gradient(to top, $color-marvel-black-2, rgba(#000, 0));
+  }
+}
+
+.section {
+  padding: 0 30px;
+}
+
+.section__header {
+  @include flex(center, space-between);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: $color-marvel-red;
+  }
+}
+
+.btn {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  color: white;
+  font-size: 20px;
+  background: red;
+  border-color: red;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

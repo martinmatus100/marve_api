@@ -1,0 +1,85 @@
+@use "../../scss/" as *;
+
+.comic-content {
+    @include flex(flex-start, flex-start);
+    max-width: 1260px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -200px;
+    position: relative;
+    padding: 0 30px;
+
+    @include mobile {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    &__poster {
+        flex: 1;
+
+        &__img {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 30px;
+            padding-top: 165%;
+        }
+    }
+
+    &__info {
+        width: 70%;
+        padding-left: 30px;
+        position: relative;
+
+        @include mobile {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        .section__header {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            font-size: 60px;
+            line-height: 1;
+            margin-bottom: 30px;
+
+            @include mobile {
+                font-size: 40px;
+            }
+        }
+
+        .stories,
+        .creators {
+            &__list {
+                @include flex(flex-start, flex-start);
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 30px;
+            }
+
+            &__item {
+                padding: 10px 25px;
+                border: 2px solid #FFF;
+                border-radius: 30px;
+                font-size: 12px;
+                font-weight: 600;
+                background-color: $color-marvel-black-2;
+            }
+        }
+
+        .stories {
+            &__item {
+                padding: 10px 25px;
+                border: 0px;
+                border-radius: 0px;
+                font-size: 16px;
+                font-weight: 600;
+                background-color: $color-marvel-red;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
